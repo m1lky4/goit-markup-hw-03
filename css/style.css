@@ -5,6 +5,7 @@
   --main-hover-color: #404bbf;
   --main-p-color: #434455;
   --main-p-bottom-color: #f4f4fd;
+  --top-line-color: #e7e9fc;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -26,8 +27,22 @@ body {
 .list {
   list-style: none;
 }
+.header {
+  border-bottom: 1px solid var(--top-line-color);
+}
+.hero-btn {
+  padding: 16px 32px;
+}
+.hero-title {
+  width: 496px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
 .hero {
   background-color: var(--main-text-color);
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero > h1 {
   color: var(--main-bg-color);
@@ -55,17 +70,24 @@ body {
 .hero button:hover {
   background: var(--main-hover-color);
 }
-
-.future-text {
+.strategy {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.feature-text {
   line-height: 1.5;
   color: var(--main-p-color);
   letter-spacing: 0.02em;
 }
-.future-title {
+.feature-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  padding-bottom: 8px;
+}
+.future-flex {
+  display: flex;
 }
 .section-title {
   font-size: 36px;
@@ -73,6 +95,18 @@ body {
   color: var(--main-text-color);
   text-transform: capitalize;
   letter-spacing: 0.02em;
+  text-align: center;
+  padding-bottom: 72px;
+  padding-top: 120px;
+}
+.about-flex {
+  display: flex;
+}
+.about {
+  padding-bottom: 120px;
+}
+.about-img:not(:last-child) {
+  margin-right: 24px;
 }
 .team {
   background: var(--main-p-bottom-color);
@@ -89,10 +123,20 @@ body {
   text-transform: uppercase;
   color: #f4f4fd;
 }
+.footer {
+  display: flex;
+  align-items: center;
+}
+.logo-bottom {
+  margin-top: 100px;
+}
 .footer-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-p-bottom-color);
+  width: 264px;
+  padding-top: 16px;
+  padding-bottom: 100px;
 }
 .nav-links-contacts {
   font-style: normal;
@@ -100,6 +144,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-p-color);
   text-decoration: none;
+}
+.contacts {
+  margin-left: auto;
 }
 .nav-links-contacts:hover,
 .nav-links-contacts:focus {
@@ -110,7 +157,7 @@ body {
 }
 .button-list button {
   background: var(--main-p-bottom-color);
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--top-line-color);
   border-radius: 4px;
   color: #4d5ae5;
   font-family: "Roboto";
@@ -137,6 +184,15 @@ button:focus {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--main-text-color);
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  margin-right: 76px;
+}
+.team {
+}
+.team-card {
+  margin-bottom: 120px;
 }
 .team-name {
   font-weight: 500;
@@ -148,6 +204,12 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-p-color);
+}
+.team-flex {
+  display: flex;
+}
+.team-card:not(:last-child) {
+  margin-right: 24px;
 }
 .project-title {
   font-weight: 500;
@@ -171,4 +233,34 @@ button:focus {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  width: 1158px;
+  margin: 0 auto;
+}
+.menu-nav {
+  display: flex;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.navigation li {
+  margin-right: 40px;
+}
+.navigation li:last-child {
+  margin-right: 0;
 }
