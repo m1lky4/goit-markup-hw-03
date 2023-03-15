@@ -31,12 +31,24 @@ body {
   border-bottom: 1px solid var(--top-line-color);
 }
 .hero-btn {
+  background: var(--main-nav-color);
+  color: var(--main-bg-color);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
   padding: 16px 32px;
+  letter-spacing: 0.04em;
 }
 .hero-title {
   width: 496px;
   margin: 0 auto;
   padding-bottom: 48px;
+  color: var(--main-bg-color);
+  font-size: 56px;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
 }
 .hero {
   background-color: var(--main-text-color);
@@ -44,36 +56,19 @@ body {
   padding-top: 188px;
   padding-bottom: 188px;
 }
-.hero > h1 {
-  color: var(--main-bg-color);
-  font-size: 56px;
-  line-height: 1.08;
-  letter-spacing: 0.02em;
-}
-.hero > button {
-  background: var(--main-nav-color);
-  color: var(--main-bg-color);
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-}
 .footer {
-  background-color: #2e2f42;
+  background-color: var(--main-text-color);
 }
 
 .nav-links:hover,
 .nav-links:focus {
   color: var(--main-hover-color);
 }
-.hero button:hover {
+.hero .hero-btn:hover,
+.hero-btn:focus {
   background: var(--main-hover-color);
 }
-.strategy {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 .feature-text {
   line-height: 1.5;
   color: var(--main-p-color);
@@ -86,7 +81,13 @@ body {
   letter-spacing: 0.02em;
   padding-bottom: 8px;
 }
-.future-flex {
+.feature {
+  width: 264px;
+}
+.feature:not(:last-child) {
+  margin-right: 24px;
+}
+.feature-flex {
   display: flex;
 }
 .section-title {
@@ -97,13 +98,9 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   padding-bottom: 72px;
-  padding-top: 120px;
 }
 .about-flex {
   display: flex;
-}
-.about {
-  padding-bottom: 120px;
 }
 .about-img:not(:last-child) {
   margin-right: 24px;
@@ -113,6 +110,31 @@ body {
 }
 .team-card {
   background: var(--main-bg-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-flex {
+  display: flex;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 8px;
+}
+.card-content-portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px 32px 16px;
+  gap: 8px;
+  border: 1px solid var(--top-line-color);
+  border-top: none;
 }
 .studio-bottom {
   font-family: "Raleway";
@@ -121,7 +143,7 @@ body {
   font-size: 18px;
   line-height: 1.16;
   text-transform: uppercase;
-  color: #f4f4fd;
+  color: var(--main-p-bottom-color);
 }
 .footer {
   display: flex;
@@ -155,29 +177,41 @@ body {
 .button-list {
   list-style-type: none;
 }
+.btn-list-flex {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding-bottom: 72px;
+  padding-top: 96px;
+}
 .button-list button {
   background: var(--main-p-bottom-color);
   border: 1px solid var(--top-line-color);
   border-radius: 4px;
-  color: #4d5ae5;
+  color: var(--main-nav-color);
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.04em;
+  padding: 12px 24px;
 }
 .button-list button:hover,
 button:focus {
   background: var(--main-hover-color);
   color: var(--main-bg-color);
 }
+.img-list-flex {
+  display: flex;
+  gap: 48px 24px;
+  flex-wrap: wrap;
+}
+.portfolio-list {
+  padding-bottom: 120px;
+}
 .logo {
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
@@ -189,11 +223,6 @@ button:focus {
   align-items: center;
   margin-right: 76px;
 }
-.team {
-}
-.team-card {
-  margin-bottom: 120px;
-}
 .team-name {
   font-weight: 500;
   font-size: 20px;
@@ -204,9 +233,6 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-p-color);
-}
-.team-flex {
-  display: flex;
 }
 .team-card:not(:last-child) {
   margin-right: 24px;
@@ -245,8 +271,21 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+img {
+  display: block;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section.section-first-child {
+  padding-top: 120px;
+  padding-bottom: 0;
+}
 .container {
   width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 .menu-nav {
@@ -263,4 +302,7 @@ ul {
 }
 .navigation li:last-child {
   margin-right: 0;
+}
+.current {
+  color: var(--main-hover-color);
 }
