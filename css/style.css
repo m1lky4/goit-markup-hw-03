@@ -199,6 +199,11 @@ button:focus {
 .card-portfolio {
   width: 360px;
 }
+.card-portfolio-link {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
 .portfolio-list {
   padding-bottom: 120px;
   padding-top: 96px;
@@ -269,6 +274,9 @@ img {
 }
 button {
   cursor: pointer;
+}
+a {
+  text-decoration: none;
 }
 .section {
   padding-top: 120px;
